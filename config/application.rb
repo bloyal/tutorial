@@ -11,6 +11,9 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+# Set secret_key_base value to make error message go away
+config.secret_key_base = 'takethisyoustupidsecrettoken'
+
 module Tutorial
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
